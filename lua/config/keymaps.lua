@@ -6,6 +6,13 @@ vim.keymap.set("i", "kj", "<esc>==")
 vim.keymap.set("n", "x", '"_x')
 vim.keymap.set("n", "<M-q>", "q:")
 
+vim.keymap.set(
+  "n",
+  "`",
+  "<CMD>Telescope buffers initial_mode=normal ignore_current_buffer=true only_cwd=true sort_lastused=true theme=ivy<CR>",
+  { desc = "Telescope buffers" }
+)
+
 -- [[ move highlighted stuff ]]
 vim.keymap.set("v", "J", ":m '>+1<CR>gv==kgvo<esc>=kgvo", { desc = "move highlighted text down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv==jgvo<esc>=jgvo", { desc = "move highlighted text up" })

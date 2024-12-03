@@ -27,8 +27,8 @@ return {
     end)
 
     -- Rotate the main cursor.
-    vim.keymap.set({ "n", "v" }, "<left>", mc.nextCursor)
-    vim.keymap.set({ "n", "v" }, "<right>", mc.prevCursor)
+    vim.keymap.set({ "n", "v" }, "<S-left>", mc.nextCursor)
+    vim.keymap.set({ "n", "v" }, "<S-right>", mc.prevCursor)
 
     -- Delete the main cursor.
     vim.keymap.set({ "n", "v" }, "<leader>md", mc.deleteCursor, { desc = "Delete cursor" })
