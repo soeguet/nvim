@@ -15,13 +15,13 @@ return {
     end)
 
     -- Add a cursor and jump to the next word under cursor.
-    vim.keymap.set({ "n", "v" }, "<m-n>", function()
+    vim.keymap.set({ "n", "v" }, "<M-m>", function()
       -- disable_hlsearch()
       mc.addCursor("*")
     end)
 
     -- Jump to the next word under cursor but do not add a cursor.
-    vim.keymap.set({ "n", "v" }, "<m-s>", function()
+    vim.keymap.set({ "n", "v" }, "<M-s>", function()
       -- disable_hlsearch()
       mc.skipCursor("*")
     end)

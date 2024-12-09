@@ -6,7 +6,7 @@ return {
   opts = {
     -- add any opts here
     ---@alias Provider "claude" | "openai" | "azure" | "gemini" | "cohere" | "copilot" | string
-    provider = "openai",
+    provider = "copilot",
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   build = "make",

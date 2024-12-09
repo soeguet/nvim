@@ -19,5 +19,4 @@ vim.opt.breakindent = true -- Maintain indent when wrapping lines
 vim.opt.exrc = true -- Enable reading of .vimrc, .exrc, .gvimrc and .nvimrc in the current directory
 
 vim.opt.list = false
-
 vim.g.ai_cmp = false
