@@ -6,6 +6,9 @@ vim.keymap.set("i", "kj", "<esc>==")
 vim.keymap.set("n", "x", '"_x')
 vim.keymap.set("n", "<M-q>", "q:")
 
+vim.keymap.set("n", "<leader>bv", "<C-w>t<C-w>H", { desc = "change buffer to vertical split" })
+vim.keymap.set("n", "<leader>bh", "<C-w>t<C-w>K", { desc = "change buffer to horizontal split" })
+
 vim.keymap.set(
   "n",
   "`",

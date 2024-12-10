@@ -38,7 +38,9 @@ return {
 
   opts = {
     defaults = {
-      path_display = "filename_first",
+      path_display = {
+        "filename_first",
+      },
       layout_config = {
         bottom_pane = {
           height = 25,
