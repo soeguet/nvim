@@ -2,7 +2,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    priority = 1000,
+    -- priority = 1000,
     opts = {
       flavour = "auto", -- latte, frappe, macchiato, mocha
       background = { -- :h background
@@ -165,7 +165,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "github_dark_default",
-      colorscheme = "tokyonight-storm",
+      colorscheme = "rose-pine-moon",
     },
   },
 }

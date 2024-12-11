@@ -1,12 +1,24 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
+require("config.lazy")
+
+local project_dap_config = vim.fn.getcwd() .. "/dap.lua"
+if vim.fn.filereadable(project_dap_config) == 1 then
+  dofile(project_dap_config)
+end
+
+vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#fda000", bg = "" })
+
 if vim.g.vscode then
   -- call is synchronous
   -- action is async
   local vscode = require("vscode")
   vim.notify = vscode.notify
   print(vscode.call("_ping")) -- outputs: pong
+
+  vim.keymap.set("n", "<leader>bv", "<C-w>t<C-w>H", { desc = "change buffer to vertical split" })
+  vim.keymap.set("n", "<leader>bh", "<C-w>t<C-w>K", { desc = "change buffer to horizontal split" })
 
   vim.keymap.set({ "n", "x", "i" }, "<C-m>", function()
     vscode.with_insert(function()
@@ -24,6 +36,20 @@ if vim.g.vscode then
 
   vim.keymap.set({ "n" }, "<leader>sf", function()
     vscode.call("workbench.action.quickOpen")
+  end)
+
+  vim.keymap.set({ "n", "v" }, "\\", function()
+    vscode.call("editor.action.smartSelect.expand")
+  end)
+
+  vim.keymap.set({ "v" }, "|", function()
+    vscode.call("editor.action.smartSelect.shrink")
+  end)
+
+  vim.keymap.set({ "i" }, "<C-space>", function()
+    vscode.with_insert(function()
+      vscode.call("editor.action.triggerSuggest")
+    end)
   end)
 
   vim.keymap.set({ "n" }, "<leader>ss", function()
@@ -58,12 +84,12 @@ if vim.g.vscode then
     vscode.call("workbench.view.explorer")
   end)
 
-  vim.keymap.set({ "n" }, "L", function()
-    vscode.call("workbench.action.nextEditorInGroup")
-  end)
-  vim.keymap.set({ "n" }, "H", function()
-    vscode.call("workbench.files.action.focusOpenEditorsView")
-  end)
+  -- vim.keymap.set({ "n" }, "L", function()
+  --   vscode.call("workbench.action.nextEditorInGroup")
+  -- end)
+  -- vim.keymap.set({ "n" }, "H", function()
+  --   vscode.call("workbench.files.action.focusOpenEditorsView")
+  -- end)
 
   vim.keymap.set({ "n" }, "<c-l>", function()
     vscode.call("workbench.action.focusRightGroup")
@@ -124,13 +150,4 @@ if vim.g.vscode then
   vim.keymap.set({ "n" }, "<c-down>", function()
     vscode.call("workbench.action.decreaseViewWidth")
   end)
-else
-  require("config.lazy")
-
-  local project_dap_config = vim.fn.getcwd() .. "/dap.lua"
-  if vim.fn.filereadable(project_dap_config) == 1 then
-    dofile(project_dap_config)
-  end
-
-  vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#fda000", bg = "" })
 end
