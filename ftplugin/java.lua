@@ -34,5 +34,3 @@ vim.opt.shiftwidth = 4 -- Number of spaces for auto-indent
 vim.opt.tabstop = 4 -- Number of spaces a tab counts for
 vim.opt.softtabstop = 4 -- Number of spaces that a <Tab> counts for while editing
 vim.opt.smartindent = true -- Smart autoindenting when starting a new line
-
-vim.lsp.inlay_hint.enable(false)

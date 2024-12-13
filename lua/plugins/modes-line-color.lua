@@ -3,10 +3,10 @@ return {
   opts = {
     colors = {
       bg = "", -- Optional bg param, defaults to Normal hl group
-      copy = "#f5c359",
+      copy = "#9745be",
       delete = "#c75c6a",
       insert = "#78ccc5",
-      visual = "#9745be",
+      visual = "#f5c359",
     },
 
     -- Set opacity for cursorline and number background

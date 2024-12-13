@@ -2,6 +2,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    lazy = true,
     -- priority = 1000,
     opts = {
       flavour = "auto", -- latte, frappe, macchiato, mocha
@@ -55,7 +56,8 @@ return {
   {
 
     "rose-pine/neovim",
-    priority = 1000,
+    lazy = true,
+    -- priority = 1000,
     config = function()
       require("rose-pine").setup({
         variant = "auto", -- auto, main, moon, or dawn
@@ -136,13 +138,16 @@ return {
   },
   {
     "scottmckendry/cyberdream.nvim",
+    lazy = true,
   },
   {
     "projekt0n/github-nvim-theme",
+    lazy = true,
     name = "github-theme",
   },
   {
     "folke/tokyonight.nvim",
+    lazy = true,
     opts = {
       style = "moon", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
       light_style = "day", -- The theme is used when the background is set to light
@@ -165,7 +170,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "github_dark_default",
-      colorscheme = "rose-pine-moon",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }
