@@ -8,7 +8,6 @@ return {
         selection = "manual", -- "manual" | "auto_insert"
       },
       menu = {
-        enabled = true,
         border = "rounded",
       },
       documentation = {

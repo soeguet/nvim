@@ -1,6 +1,9 @@
+local obsidian_folder_exists = vim.fn.isdirectory(vim.fn.expand("~/Documents/obsidian"))
+
 return {
   "epwalsh/obsidian.nvim",
   lazy = false,
+  enabled = obsidian_folder_exists,
   version = "*", -- recommended, use latest release instead of latest commit
   ft = "markdown",
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:

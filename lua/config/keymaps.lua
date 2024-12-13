@@ -24,7 +24,7 @@ vim.keymap.set(
 vim.keymap.set("v", "J", ":m '>+1<CR>gv==kgvo<esc>=kgvo", { desc = "move highlighted text down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv==jgvo<esc>=jgvo", { desc = "move highlighted text up" })
 
-vim.keymap.set("n", "<leader>nh", "<cmd>nohlsearch<CR>", { desc = "Clear highlights" })
+-- vim.keymap.set("n", "<leader>nh", "<cmd>nohlsearch<CR>", { desc = "Clear highlights" })
 vim.api.nvim_create_user_command("ClearHighlights", function()
   vim.cmd("nohlsearch")
 end, { desc = "Clear highlights" })
