@@ -25,8 +25,14 @@ local function filenameFirst(abc, path)
 end
 
 local custom_file_ignore_patterns = {
-  "node%_modules/.*",
+  "package%-lock%.json",
+  "tsconfig%.json",
+  "/%.git/.*",
+  "/%.github/.*",
+  "*.d.ts",
+  "/node%_modules/.*",
   "target/.*",
+  "package-lock.json",
   "^jdt:/*",
   "%.class$",
 }
@@ -38,6 +44,7 @@ return {
 
   opts = {
     defaults = {
+      file_ignore_patterns = custom_file_ignore_patterns,
       path_display = {
         "filename_first",
       },
