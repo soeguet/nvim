@@ -1,5 +1,10 @@
 return {
-  -- "zbirenbaum/copilot.lua",
+  "zbirenbaum/copilot.lua",
+  opts = {
+    suggestion = {
+      debounce = 1000,
+    },
+  },
   -- opts = function()
   --   LazyVim.cmp.actions.ai_accept = function()
   --     if require("copilot.suggestion").is_visible() then
