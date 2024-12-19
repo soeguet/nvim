@@ -1,17 +1,48 @@
+-- local copilot = require("copilot.suggestion")
+-- local debounce_timer = nil
+--
+-- -- Debounce-Funktion
+-- local function debounce(func, delay)
+--   if debounce_timer then
+--     debounce_timer:stop()
+--   end
+--   debounce_timer = vim.defer_fn(func, delay)
+-- end
+--
+-- -- Cursor-Hold-Event: Copilot Suggestions anzeigen
+-- vim.api.nvim_create_autocmd("CursorHold", {
+--   callback = function()
+--     debounce(function()
+--       if not copilot.is_visible() then
+--         copilot.toggle_auto_trigger()
+--       end
+--     end, 200) -- 200ms Verzögerung nach Cursor-Stopp
+--   end,
+-- })
+--
+-- -- Event für Textänderungen: Copilot Suggestions verstecken
+-- vim.api.nvim_create_autocmd({ "TextChangedI", "TextChanged" }, {
+--   callback = function()
+--     if copilot.is_visible() then
+--       copilot.dismiss()
+--     end
+--   end,
+-- })
+--
+-- -- Cursor bewegt sich: Copilot Suggestions verstecken
+-- vim.api.nvim_create_autocmd("CursorMovedI", {
+--   callback = function()
+--     if copilot.is_visible() then
+--       copilot.dismiss()
+--     end
+--   end,
+-- })
+--
 return {
   "zbirenbaum/copilot.lua",
   opts = {
     suggestion = {
-      debounce = 1000,
+      enable = true,
     },
   },
-  -- opts = function()
-  --   LazyVim.cmp.actions.ai_accept = function()
-  --     if require("copilot.suggestion").is_visible() then
-  --       LazyVim.create_undo()
-  --       require("copilot.suggestion").accept()
-  --       return true
-  --     end
-  --   end
-  -- end,
 }
