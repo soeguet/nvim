@@ -13,12 +13,8 @@ vim.keymap.set("n", "<M-q>", "q:")
 vim.keymap.set("n", "<leader>bv", "<C-w>t<C-w>H", { desc = "change buffer to vertical split" })
 vim.keymap.set("n", "<leader>bh", "<C-w>t<C-w>K", { desc = "change buffer to horizontal split" })
 
-vim.keymap.set(
-  "n",
-  "`",
-  "<CMD>Telescope buffers initial_mode=normal ignore_current_buffer=true only_cwd=true sort_lastused=true theme=ivy<CR>",
-  { desc = "Telescope buffers" }
-)
+vim.keymap.set("n", "`", "<CMD>FzfLua buffers<CR>", { desc = "Fzf buffers" })
+vim.keymap.set("n", "<leader>sf", "<CMD>FzfLua files<CR>", { desc = "Fzf find files" })
 
 -- [[ move highlighted stuff ]]
 vim.keymap.set("v", "J", ":m '>+1<CR>gv==kgvo<esc>=kgvo", { desc = "move highlighted text down" })

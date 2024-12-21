@@ -2,7 +2,7 @@ return {
   "LintaoAmons/scratch.nvim",
   dependencies = {
     "stevearc/dressing.nvim",
-    "nvim-telescope/telescope.nvim",
+    -- "nvim-telescope/telescope.nvim",
   },
   event = "VeryLazy",
   opts = {

@@ -5,8 +5,8 @@ return {
       bg = "", -- Optional bg param, defaults to Normal hl group
       copy = "#9745be",
       delete = "#c75c6a",
-      insert = "#78ccc5",
-      visual = "#f5c359",
+      insert = "#78cc15",
+      visual = "#f5f319",
     },
 
     -- Set opacity for cursorline and number background

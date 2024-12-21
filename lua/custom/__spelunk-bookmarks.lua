@@ -1,8 +1,9 @@
 return {
   "EvWilson/spelunk.nvim",
+  enabled = false,
   dependencies = {
     "nvim-lua/plenary.nvim", -- For window drawing utilities
-    "nvim-telescope/telescope.nvim", -- Optional: for fuzzy search capabilities
+    -- "nvim-telescope/telescope.nvim", -- Optional: for fuzzy search capabilities
   },
   config = function()
     require("spelunk").setup({
