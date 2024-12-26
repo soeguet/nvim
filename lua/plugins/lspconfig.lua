@@ -24,10 +24,12 @@ return {
                 -- Make the LuaRocks modules visible to lua_ls
                 vim.fn.expand("$VIMRUNTIME/lua"),
                 "/usr/local/lib/luarocks/rocks-5.1/",
-                vim.fn.expand("~/.luarocks/share/lua/5.1"),
-                "/usr/share/lua/5.1",
-                "/home/soeguet/.luarocks/lib/luarocks/rocks-5.1/luv/1.48.0-2/lib/",
-                "/home/soeguet/.luarocks/lib/luarocks/rocks-5.1/http/0.4-0/",
+                vim.fn.expand("~/.luarocks/share/lua/5.1/"),
+                "/usr/share/lua/5.1/",
+                "/usr/local/lib/lua/5.1/",
+                "/usr/local/lib/lua/5.1/parser/",
+                -- "/home/soeguet/.luarocks/lib/luarocks/rocks-5.1/luv/1.48.0-2/lib/",
+                -- "/home/soeguet/.luarocks/lib/luarocks/rocks-5.1/http/0.4-0/",
               },
             },
             codeLens = {

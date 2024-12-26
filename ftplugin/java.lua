@@ -29,8 +29,8 @@
 -- vim.api.nvim_buf_set_keymap(0, "n", "<F8>", ":lua BuildMavenProject()<CR>", { silent = true })
 -- vim.api.nvim_command("autocmd BufWritePost *.java lua BuildMavenProject()")
 
-vim.opt.expandtab = true -- Convert tabs to spaces
-vim.opt.shiftwidth = 4 -- Number of spaces for auto-indent
-vim.opt.tabstop = 4 -- Number of spaces a tab counts for
-vim.opt.softtabstop = 4 -- Number of spaces that a <Tab> counts for while editing
-vim.opt.smartindent = true -- Smart autoindenting when starting a new line
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.smartindent = true
