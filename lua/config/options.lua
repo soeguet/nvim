@@ -17,6 +17,7 @@ vim.opt.autoindent = true -- Copy indent from current line when starting a new l
 vim.opt.breakindent = true -- Maintain indent when wrapping lines
 
 vim.opt.exrc = true -- Enable reading of .vimrc, .exrc, .gvimrc and .nvimrc in the current directory
+vim.g.editorconfig = true
 
 vim.opt.list = false
 vim.g.ai_cmp = false
