@@ -8,6 +8,7 @@ if vim.fn.filereadable(project_dap_config) == 1 then
   dofile(project_dap_config)
 end
 
+-- vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#a9a9a9" })
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#fda000", bg = "" })
 
 if vim.g.vscode then

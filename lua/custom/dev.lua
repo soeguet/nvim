@@ -1,9 +1,9 @@
 return {
   {
-    dir = "/home/soeguet/plugins/present.nvim",
+    dir = "/home/soeguet/plugins/workline.nvim/",
     dev = true,
     config = function()
-      require("present")
+      require("workline")
     end,
   },
 }

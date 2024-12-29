@@ -13,5 +13,6 @@ return {
       enabled = false,
       notify = false,
     },
+    colorscheme = "nightfox",
   },
 }

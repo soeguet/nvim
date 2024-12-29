@@ -6,6 +6,17 @@ vim.keymap.set("n", "<leader>xf", "<cmd>source %<CR>", { desc = "source this" })
 vim.keymap.set("n", "<leader>xF", ":.lua<CR>", { desc = "source this" })
 vim.keymap.set("v", "<leader>xF", ":lua<CR>", { desc = "source this" })
 
+vim.keymap.set("n", "U", function()
+  vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+end, { desc = "" })
+
+vim.keymap.set("n", "<leader>dn", function()
+  require("osv").launch({ port = 8086 })
+end, { desc = "launch neovim debugging server 8086", noremap = true })
+
+vim.keymap.del("n", "H")
+vim.keymap.del("n", "L")
+
 vim.keymap.set("i", "kj", "<esc>==")
 vim.keymap.set("n", "x", '"_x')
 vim.keymap.set("n", "<M-q>", "q:")

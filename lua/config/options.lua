@@ -24,3 +24,6 @@ vim.g.ai_cmp = false
 
 vim.opt.spelllang = { "en", "de" }
 vim.opt.spell = true
+
+vim.g.snacks_animate = false
+vim.g.showtabline = 0

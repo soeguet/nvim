@@ -5,9 +5,7 @@
 --     vim.b.copilot_suggestion_hidden = true
 --   end,
 -- })
-
 --
--- })
 -- vim.api.nvim_create_autocmd("User", {
 --   pattern = "BlinkCmpCompletionMenuClose",
 --   callback = function()
@@ -20,6 +18,7 @@ return {
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
+
     keymap = {
       preset = "super-tab",
       ["<Tab>"] = {
@@ -36,18 +35,20 @@ return {
         "snippet_forward",
         "fallback",
       },
+      ["<C-y>"] = { "accept", "fallback" },
       ["<CR>"] = { "accept", "fallback" },
       ["<S-Tab>"] = { "snippet_backward", "fallback" },
       ["<C-l>"] = { "snippet_forward", "fallback" },
       ["<C-h>"] = { "snippet_backward", "fallback" },
     },
     completion = {
+      keyword = { range = "full" },
       trigger = {
         show_on_accept_on_trigger_character = false,
         -- show_in_snippet = false,
       },
       list = {
-        selection = "preselect", -- "manual" | "auto_insert" | "preselect"
+        selection = "manual", -- "manual" | "auto_insert" | "preselect"
       },
       menu = {
         border = "rounded",
