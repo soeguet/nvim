@@ -1,18 +1,18 @@
 return {
-  "LazyVim/LazyVim",
-  opts = {
-    change_detection = {
-      enabled = false,
-      notify = false,
+    "LazyVim/LazyVim",
+    opts = {
+        change_detection = {
+            enabled = false,
+            notify = false,
+        },
+        ui = {
+            border = "rounded",
+        },
+        -- automatically check for plugin updates
+        checker = {
+            enabled = false,
+            notify = false,
+        },
+        colorscheme = "nordfox",
     },
-    ui = {
-      border = "rounded",
-    },
-    -- automatically check for plugin updates
-    checker = {
-      enabled = false,
-      notify = false,
-    },
-    colorscheme = "nightfox",
-  },
 }

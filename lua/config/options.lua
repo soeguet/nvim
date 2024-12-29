@@ -20,7 +20,7 @@ vim.opt.exrc = true -- Enable reading of .vimrc, .exrc, .gvimrc and .nvimrc in t
 vim.g.editorconfig = true
 
 vim.opt.list = false
-vim.g.ai_cmp = false
+vim.g.ai_cmp = true
 
 vim.opt.spelllang = { "en", "de" }
 vim.opt.spell = true
