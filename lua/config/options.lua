@@ -27,3 +27,5 @@ vim.opt.spell = true
 
 vim.g.snacks_animate = false
 vim.g.showtabline = 0
+
+vim.opt.mousescroll = "ver:1,hor:1"
