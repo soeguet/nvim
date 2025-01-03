@@ -11,6 +11,23 @@ end
 -- vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#a9a9a9" })
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#fda000", bg = "" })
 
+if vim.fn.executable("rg") == 1 then
+    vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
+    vim.opt.grepformat = "%f:%l:%c:%m,%f:%l:%m"
+end
+
+vim.api.nvim_create_autocmd("QuickFixCmdPost", {
+    pattern = "grep",
+    callback = function()
+        vim.cmd("copen")
+    end,
+})
+
+vim.api.nvim_create_user_command("SilentGrep", function(opts)
+    vim.cmd("grep " .. opts.args)
+    vim.cmd("copen")
+end, { nargs = "+" })
+
 if vim.g.neovide then
     vim.print(vim.g.neovide_version)
 

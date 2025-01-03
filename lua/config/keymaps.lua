@@ -2,7 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.keymap.set("n", "<M-C-P>", "<CMD>FzfLua grep<CR>", { desc = "Fzf grep" })
+vim.keymap.set("n", "<M-C-P>", ":silent grep ", { desc = "Fzf grep" })
 vim.keymap.set("n", "<leader>xf", "<cmd>source %<CR>", { desc = "source this" })
 vim.keymap.set("n", "<leader>xF", ":.lua<CR>", { desc = "source this" })
 vim.keymap.set("v", "<leader>xF", ":lua<CR>", { desc = "source this" })
