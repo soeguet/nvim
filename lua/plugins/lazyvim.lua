@@ -13,6 +13,6 @@ return {
             enabled = false,
             notify = false,
         },
-        colorscheme = "nordfox",
+        colorscheme = "catppuccin",
     },
 }

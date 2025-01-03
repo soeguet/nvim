@@ -1,5 +1,9 @@
 local obsidian_folder_exists = vim.fn.isdirectory(vim.fn.expand("~/Documents/obsidian")) == 1
 
+vim.api.nvim_create_user_command("OT", function()
+    vim.cmd([[ObsidianToday]])
+end, { desc = "ObisidianToday" })
+
 return {
     "epwalsh/obsidian.nvim",
     lazy = false,

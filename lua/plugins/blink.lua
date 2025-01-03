@@ -1,18 +1,3 @@
--- vim.api.nvim_create_autocmd("User", {
---   pattern = "BlinkCmpCompletionMenuOpen",
---   callback = function()
---     require("copilot.suggestion").dismiss()
---     vim.b.copilot_suggestion_hidden = true
---   end,
--- })
---
--- vim.api.nvim_create_autocmd("User", {
---   pattern = "BlinkCmpCompletionMenuClose",
---   callback = function()
---     vim.b.copilot_suggestion_hidden = false
---   end,
--- })
-
 return {
     "saghen/blink.cmp",
     ---@module 'blink.cmp'
@@ -35,9 +20,11 @@ return {
                 "snippet_forward",
                 "fallback",
             },
+            ["<C-f>"] = { "snippet_forward", "fallback" },
             ["<C-y>"] = { "accept", "fallback" },
             ["<CR>"] = { "accept", "fallback" },
             ["<S-Tab>"] = { "snippet_backward", "fallback" },
+            ["<C-b>"] = { "snippet_backward", "fallback" },
             ["<C-l>"] = { "snippet_forward", "fallback" },
             ["<C-h>"] = { "snippet_backward", "fallback" },
         },
@@ -52,6 +39,15 @@ return {
             },
             menu = {
                 border = "rounded",
+                draw = {
+                    columns = {
+                        { "kind_icon", "kind", gap = 1 },
+                        { "label", "label_description" },
+                    },
+                    treesitter = {
+                        "lsp",
+                    },
+                },
             },
             documentation = {
                 auto_show = true,
